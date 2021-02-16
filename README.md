@@ -15,6 +15,10 @@ Data from `shots model` is then used to create a 2D histogram of shot locations 
 
 ![rawdata](Outputs/Figure_29.png)
 
-In order to understand which shots result in goals, a 2D histogram of goals from `shots model` is plotted (below). 
+In order to understand which shots result in goals, a 2D histogram of goals from `shots model` is plotted (below). The scale is much lower in comparison to the previous figure. This figure clearly shows that shots taken from closer to the goal mouth result in goals than much fewer ones scored from a distance. 
 
 ![rawdata](Outputs/Figure_30.png)
+
+A key result that can be obtained from the previous observations is the probability of scoring goals from different locations (below), upon which the `xG model` will be built.
+
+![rawdata](Outputs/Figure_31.png)
