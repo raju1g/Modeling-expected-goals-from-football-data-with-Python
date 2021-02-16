@@ -23,6 +23,6 @@ Data from `shots model` is then used to create the following three heat maps.
 
 ![rawdata](Outputs/Figure_31.png)
 
-*Probability of scoring*: A key result that can be obtained from the previous observations is the probability of scoring goals from different locations, upon which the `xG model` is built. It is simply obtained by dividing the no. of goals scored in each location by the no. of shots taken from that location. There are some anomalous data points that are based on goals scored due to luck or player error, which are required to be ironed-out for the `xG model`.
+*Probability of scoring*: A key result that can be obtained from the previous observations is the probability of scoring goals from different locations, upon which the `xG model` is built. It is simply obtained by dividing the no. of goals scored in each location by the no. of shots taken from that location. There are some anomalous data points that are based on goals scored due to luck or player error, which are required to be smoothed-out for the `xG model`.
 
 
