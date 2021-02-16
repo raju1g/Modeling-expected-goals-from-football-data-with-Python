@@ -11,14 +11,16 @@ It is a statistical measure of chance quality. For example, it is the probabilit
 
 The script `Model_xG.py` is used to load the events data. Once the data is loaded, the same script is used to set up the `shots model` which picks out all the shots that are not headers, free-kicks and penalties and puts them in a separate data frame that is subsequently used in the `xG model`. 
 
-Data from `shots model` is then used to create a 2D histogram of shot locations (below), which shows the heat map (frequency) of shots occuring from different locations in front of goal throughout the entire season (380 matches). The scale bar ranges from 0 to 50. The figure clearly shows that a lot of shots are taken from within the penalty area. There are also a number of shots taken from outside the penalty area. This figure does not give any indication on the quality of those shots (goal or no goal).  
+Data from `shots model` is then used to create the following three heat maps.
 
 ![rawdata](Outputs/Figure_29.png)
 
-In order to understand which shots result in goals, a 2D histogram of goals from `shots model` is plotted (below). The scale is much lower in comparison to the previous figure. This figure clearly shows that shots taken from closer to the goal mouth result in goals than much fewer ones scored from a distance. 
+*No. of shots*: A 2D histogram of shot locations, which shows the heat map (frequency) of shots occuring from different locations in front of goal throughout the entire season (380 matches). The scale bar ranges from 0 to 50. The figure clearly shows that a lot of shots are taken from within the penalty area. There are also a number of shots taken from outside the penalty area. This figure does not give any indication on the quality of those shots (goal or no goal).  
 
 ![rawdata](Outputs/Figure_30.png)
 
-A key result that can be obtained from the previous observations is the probability of scoring goals from different locations (below), upon which the `xG model` will be built.
+*No. of goals scored*: In order to understand which shots result in goals, a 2D histogram of goals from `shots model` is plotted. The scale is much lower in comparison to the previous figure. This figure clearly shows that shots taken from closer to the goal mouth result in goals than much fewer ones scored from a distance. 
 
 ![rawdata](Outputs/Figure_31.png)
+
+*Probability of scoring*: A key result that can be obtained from the previous observations is the probability of scoring goals from different locations, upon which the `xG model` is built. It is simply obtained by dividing the no. of goals scored in each location by the no. of shots taken from that location. 
