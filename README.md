@@ -1,2 +1,3 @@
 # Modeling-expected-goals-from-football-data-with-Python
-I model expected goals percentages as a function of location on the pitch using a season long English Premier League data. The data is analysed using two key metrics that are primarily used in creating the model.
+
+An `Expected goals` model looks at a typical data set behind an expected goals model and builds a statistical model that not only fits to data but also can be used to predict the outcome of events.     
