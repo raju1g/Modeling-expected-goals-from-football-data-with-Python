@@ -13,5 +13,5 @@ The script `Model_xG.py` is used to load the events data. Once the data is loade
 
 The `shots model` data frame is then used to create a 2D histogram of shot locations, an example of which is shown below.
 
-![rawdata](Outputs/NumberOfShots.pdf)
+![rawdata](Outputs/Figure_29.png)
 
