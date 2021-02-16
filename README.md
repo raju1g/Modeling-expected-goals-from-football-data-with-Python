@@ -7,5 +7,5 @@ It is a statistical measure of chance quality. For example, it is the probabilit
 
 ![rawdata](Outputs/xG.png)
 
-*xG graphics in TV feed*: 
+*xG used to supplement information in TV feed*: As shown above, Gabriel Jesus's shot map is broken down to represent shots (circles) and goals (stars) with the level of difficulty of each shot (xG) illustrated with a color map. 
 
