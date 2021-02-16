@@ -11,7 +11,7 @@ It is a statistical measure of chance quality. For example, it is the probabilit
 
 The script `Model_xG.py` is used to load the events data. Once the data is loaded, the same script is used to set up the `shots model` which picks out all the shots that are not headers, free-kicks and penalties and puts them in a separate data frame that is subsequently used in the `xG model`. 
 
-The `shots model` data frame is then used to create a 2D histogram of shot locations, an example of which is shown below.
+Data from `shots model` is then used to create a 2D histogram of shot locations (below), which shows the heat map (frequency) of shots occuring from different locations in front of goal throughout the entire season (380 matches). The scale bar ranges from 0 to 50. The figure clearly shows that a lot of shots are taken from within the penalty area.  
 
 ![rawdata](Outputs/Figure_29.png)
 
