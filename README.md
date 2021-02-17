@@ -34,3 +34,7 @@ The first parameter that is used to formulate the model is `shot distance`. In t
 The next parameter used to formulate the model is `shot angle`. Here, the angle created by two lines drawn from the shot location to each of the goal posts is measured. This angle should be lower the further a player is from goal and greater when closer to goal. In the figure below, the probability of scoring as a function of shot angle is plotted. As expected, the probability of scoring increases with shot angle. The fit is obtained using a logistic curve with an expression highlighted in the figure. 
 
 ![rawdata](Outputs/angle.png)
+
+Finally, the each shot is assigned a new probability of scoring based on the two criteria mentioned above and the `xG model` is thus formulated (below).
+
+![rawdata](Outputs/xG model.png)
