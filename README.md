@@ -37,4 +37,4 @@ The next parameter used to formulate the model is `shot angle`. Here, the angle 
 
 Finally, the each shot is assigned a new probability of scoring based on the two criteria mentioned above and the `xG model` is thus formulated (below).
 
-![rawdata](Outputs/xG model.png)
+![rawdata](Outputs/xGmodel.png)
