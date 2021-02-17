@@ -1,6 +1,6 @@
 # Modeling-expected-goals-from-football-data-with-Python
 
-An `Expected goals (xG)` model is built using events data from a recently concluded season of the English Premier League (https://figshare.com/collections/Soccer_match_event_dataset/4415000/5). It is a statistical model that fits to data, can be used to predict the outcome of events and lays ground for later, more advanced ML models.
+An `Expected goals (xG)` model is built using events data from a recently concluded season of the English Premier League (https://figshare.com/collections/Soccer_match_event_dataset/4415000/5). It is a statistical model that fits to data, can be used to predict the outcome of events and lays ground for later, more advanced ML models. The model defined here is inspired by this paper: https://www.tandfonline.com/doi/full/10.1080/02640414.2016.1177657
 
 `What is xG?`
 It is a statistical measure of chance quality. For example, it is the probability that on a given day a shot taken from a particular location on the pitch would result in a goal scored. Its numerous uses range from **conveying the full story** of a match that tells more than just the scoreline, **predicting future goals scored** (great for bookmaking and betting companies) and **guide players and coaches in decision making**.
@@ -25,4 +25,12 @@ Data from `shots model` is then used to create the following three heat maps.
 
 *Probability of scoring*: A key result that can be obtained from the previous observations is the probability of scoring goals from different locations, upon which the `xG model` is built. It is simply obtained by dividing the no. of goals scored in each location by the no. of shots taken from that location. There are some anomalous data points that are based on goals scored due to luck or player error, which are required to be smoothed-out for the `xG model`.
 
+Effort to understand data in this way is made easier with a model that not only gives an underlying explanation but also helps to smooth-out the data. The model described here is based on the notion that the probability of scoring a goal will be greater when a player is closer (distance) and can see more of the goal-mouth (angle). 
 
+The first parameter that is used to formulate the model is `shot distance`. In the figure below, the probability of scoring as a function of distance from the goal line is plotted. As expected, the probability of scoring is 1 when a player is 0 metres from goal and it already decreases to 0.2 at a distance of 10 metres. The data is fit using a logistic curve with an expression highlighted in the figure. 
+
+![rawdata](Outputs/distance.png)
+
+The next parameter used to formulate the model is `shot angle`. Here, the angle created by two lines drawn from the shot location to each of the goal posts is measured. This angle should be lower the further a player is from goal and greater when closer to goal. In the figure below, the probability of scoring as a function of shot angle is plotted. As expected, the probability of scoring increases with shot angle. The fit is obtained using a logistic curve with an expression highlighted in the figure. 
+
+![rawdata](Outputs/angle.png)
