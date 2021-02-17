@@ -27,6 +27,10 @@ Data from `shots model` is then used to create the following three heat maps.
 
 Effort to understand data in this way is made easier with a model that not only gives an underlying explanation but also helps to smooth-out the data. The model described here is based on the notion that the probability of scoring a goal will be greater when a player is closer (distance) and can see more of the goal-mouth (angle). 
 
+The first parameter that is used to formulate the model is `shot distance`. In the figure below, the probability of scoring as a function of distance from the goal line is plotted. As expected, the probability of scoring is 1 when a player is 0 metres from goal and it already decreases to 0.2 at a distance of 10 metres. The data is fit using a logistic curve with an expression highlighted in the figure. 
+
 ![rawdata](Outputs/distance.png)
+
+The next parameter used to formulate the model is `shot angle`. Here, the angle created by two lines drawn from the shot location to each of the goal posts is measured. This angle should be lower the further a player is from goal and greater when closer to goal. In the figure below, the probability of scoring as a function of shot angle is plotted. As expected, the probability of scoring increases with shot angle. The fit is obtained using a logistic curve with an expression highlighted in the figure. 
 
 ![rawdata](Outputs/angle.png)
