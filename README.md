@@ -27,6 +27,6 @@ Data from `shots model` is then used to create the following three heat maps.
 
 Effort to understand data in this way is made easier with a model that not only gives an underlying explanation but also helps to smooth-out the data. The model described here is based on the notion that the probability of scoring a goal will be greater when a player is closer (distance) and can see more of the goal-mouth (angle). 
 
-![rawdata](Outputs/angle.png)
-
 ![rawdata](Outputs/distance.png)
+
+![rawdata](Outputs/angle.png)
