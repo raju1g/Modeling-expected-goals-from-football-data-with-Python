@@ -64,7 +64,7 @@ H_Goal=np.histogram2d(goals_only['X'], goals_only['Y'],bins=50,range=[[0, 100],[
 
 
 #Plot the number of shots from different points
-(fig,ax) = FCPython.createGoalMouth()
+(fig,ax) = PitchMap.createGoalMouth()
 pos=ax.imshow(H_Shot[0], extent=[-1,66,104,-1], aspect='auto',cmap=plt.cm.PuRd)
 fig.colorbar(pos, ax=ax)
 ax.set_title('Number of shots')
@@ -73,11 +73,11 @@ plt.ylim((-3,35))
 plt.tight_layout()
 plt.gca().set_aspect('equal', adjustable='box')
 plt.show()
-fig.savefig('Output/NumberOfShots.pdf', dpi=None, bbox_inches="tight")   
+fig.savefig('Outputs/NumberOfShots.pdf', dpi=None, bbox_inches="tight")   
 
 
 #Plot the number of GOALS from different points
-(fig,ax) = FCPython.createGoalMouth()
+(fig,ax) = PitchMap.createGoalMouth()
 pos=ax.imshow(H_Goal[0], extent=[-1,66,104,-1], aspect='auto',cmap=plt.cm.PuRd)
 fig.colorbar(pos, ax=ax)
 ax.set_title('Number of goals')
@@ -86,11 +86,11 @@ plt.ylim((-3,35))
 plt.tight_layout()
 plt.gca().set_aspect('equal', adjustable='box')
 plt.show()
-fig.savefig('Output/NumberOfGoals.pdf', dpi=None, bbox_inches="tight")   
+fig.savefig('Outputs/NumberOfGoals.pdf', dpi=None, bbox_inches="tight")   
 
 
 #Plot the probability of scoring from different points
-(fig,ax) = FCPython.createGoalMouth()
+(fig,ax) = PitchMap.createGoalMouth()
 pos=ax.imshow(H_Goal[0]/H_Shot[0], extent=[-1,66,104,-1], aspect='auto',cmap=plt.cm.PuRd,vmin=0, vmax=0.5)
 fig.colorbar(pos, ax=ax)
 ax.set_title('Proportion of shots resulting in a goal')
@@ -99,5 +99,5 @@ plt.ylim((-3,35))
 plt.tight_layout()
 plt.gca().set_aspect('equal', adjustable='box')
 plt.show()
-fig.savefig('Output/ProbabilityOfScoring.pdf', dpi=None, bbox_inches="tight")   
+fig.savefig('Outputs/ProbabilityOfScoring.pdf', dpi=None, bbox_inches="tight")   
 
